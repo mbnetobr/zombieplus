@@ -4,14 +4,14 @@ var createActions = {
     createForm: function () {
         return this
             .click('@addButton')
-            .waitForElementVisible('@movieForm', 3000)
+            .waitForElementVisible('@movieForm', 5000)
     },
 
     selectStatus: function (status) {
         return this
             .click('@statusSelect')
             .useXpath()
-            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 2000)
+            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 5000)
             .click(`//li//span[contains(text(),"${status}")]`)
             .useCss()
     },
