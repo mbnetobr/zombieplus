@@ -68,14 +68,14 @@ RUN FIREFOX_URL="https://download.mozilla.org/?product=firefox-latest-ssl&os=lin
 
 # install geckodriver
 
-RUN export GECKODRIVER_LATEST_RELEASE_URL=$(curl https://api.github.com/repos/mozilla/geckodriver/releases/latest | jq -r ".assets[] | select(.name | test(\"linux64\")) | .browser_download_url") \
-     && curl --silent --show-error --location --fail --retry 3 --output /tmp/geckodriver_linux64.tar.gz "$GECKODRIVER_LATEST_RELEASE_URL" \
-     && cd /tmp \
-     && tar xf geckodriver_linux64.tar.gz \
-     && rm -rf geckodriver_linux64.tar.gz \
-     && sudo mv geckodriver /usr/local/bin/geckodriver \
-     && sudo chmod +x /usr/local/bin/geckodriver \
-     && geckodriver --version
+#RUN export GECKODRIVER_LATEST_RELEASE_URL=$(curl https://api.github.com/repos/mozilla/geckodriver/releases/latest | jq -r ".assets[] | select(.name | test(\"linux64\")) | .browser_download_url") \
+ #    && curl --silent --show-error --location --fail --retry 3 --output /tmp/geckodriver_linux64.tar.gz "$GECKODRIVER_LATEST_RELEASE_URL" \
+  #   && cd /tmp \
+   #  && tar xf geckodriver_linux64.tar.gz \
+    # && rm -rf geckodriver_linux64.tar.gz \
+     #&& sudo mv geckodriver /usr/local/bin/geckodriver \
+     #&& sudo chmod +x /usr/local/bin/geckodriver \
+     #&& geckodriver --version
 
 # install chrome
 
