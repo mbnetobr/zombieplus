@@ -16,7 +16,7 @@ module.exports = {
   },
 
   test_workers: {
-    enabled: true,
+    enabled: false,
     workers: 4
   },
 
