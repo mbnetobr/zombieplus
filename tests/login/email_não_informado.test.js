@@ -1,5 +1,5 @@
 module.exports = {
-'@disabled': true,
+'@disabled': false,
 
 'email não informado': (browser) => {
         let login = browser.page.login()
