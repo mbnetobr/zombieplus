@@ -17,8 +17,8 @@ pipeline {
                 sh "npm run test:ci"
             }
             post {
-                alaways{
-                junit testResults: "tests_output/**/*.xml"
+                always{
+                    junit testResults: "tests_output/**/*.xml"
                 }
             }
             
